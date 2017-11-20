@@ -9,3 +9,4 @@ public/bower_components
 /.settings
 /RUNNING_PID
 /bin/
+/dist/
