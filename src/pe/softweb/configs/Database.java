@@ -5,7 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    private static String url = "jdbc:mysql://localhost:3306/db_animales";
+    //private static String url = "jdbc:mysql://localhost:3306/db_animales";
+    static final String url = "jdbc:sqlite:db/db_accesos.db";
     private static String user = "root";
     private static String password = "123";
 
@@ -14,7 +15,7 @@ public class Database {
            try {
                // 2: Cargar el driver
                // puede lanzar la excepcion ClassNotFoundException
-               Class.forName("com.mysql.jdbc.Driver");
+               Class.forName("com.sqlite.jdbc.Driver");
                // 3: Obtener una conexion a la BD
                // Puede lanzar un SQLException
                con = DriverManager.getConnection(url, user, password);
